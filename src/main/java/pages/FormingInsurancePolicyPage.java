@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.junit.Assert.assertEquals;
 
@@ -52,6 +52,7 @@ public class FormingInsurancePolicyPage extends BasePage {
     WebElement alertTextField;
 
     private void fillField(WebElement element, String value) {
+        wait.until(ExpectedConditions.visibilityOf(element));
         element.click();
         element.clear();
         element.sendKeys(value);
