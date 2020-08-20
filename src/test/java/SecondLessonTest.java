@@ -10,6 +10,7 @@ public class SecondLessonTest extends BaseTest {
 
     @Test
     public void sberbankSecondTest() {
+        driver.get(baseUrl);
         MainPage mainPage = new MainPage(driver);
 
         mainPage.closePopUpButton();

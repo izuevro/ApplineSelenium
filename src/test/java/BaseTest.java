@@ -16,7 +16,6 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", properties.getProperty("webdriver.chrome.driver"));
         driver = new ChromeDriver();
         baseUrl = properties.getProperty("app.url");
-        driver.get(baseUrl);
     }
 
     @AfterClass

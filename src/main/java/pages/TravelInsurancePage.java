@@ -23,6 +23,5 @@ public class TravelInsurancePage extends BasePage {
 
     public TravelInsurancePage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
     }
 }

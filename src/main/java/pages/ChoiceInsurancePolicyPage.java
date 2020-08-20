@@ -24,7 +24,5 @@ public class ChoiceInsurancePolicyPage extends BasePage {
 
     public ChoiceInsurancePolicyPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 10);
     }
 }

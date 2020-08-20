@@ -143,6 +143,5 @@ public class FormingInsurancePolicyPage extends BasePage {
 
     public FormingInsurancePolicyPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
     }
 }
