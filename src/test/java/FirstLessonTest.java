@@ -52,7 +52,9 @@ public class FirstLessonTest {
         assertEquals("02.04.1993", birthDateVzr.getAttribute("value"));
 
         // Заполнить поля блока "Страхователь" и проверить результат заполнения
-        WebElement personLastName = driver.findElement(By.cssSelector("#person_lastName"));
+        WebElement personLastName = wait.until(ExpectedConditions.presenceOfElementLocated
+                (By.cssSelector("#person_lastName")));
+        //WebElement personLastName = driver.findElement(By.cssSelector("#person_lastName"));
         personLastName.click();
         personLastName.sendKeys("Петрова");
         assertEquals("Петрова", personLastName.getAttribute("value"));
