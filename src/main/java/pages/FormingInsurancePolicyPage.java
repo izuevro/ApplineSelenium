@@ -130,6 +130,10 @@ public class FormingInsurancePolicyPage extends BasePage {
         throw new AssertionError("Поле не объявлено на странице");
     }
 
+    public String getActualValue(String name) {
+        return new FormingInsurancePolicyPage(driver).getFillField(name);
+    }
+
     public void checkSexOfInsurer() {
         sexOfInsurer.click();
     }
