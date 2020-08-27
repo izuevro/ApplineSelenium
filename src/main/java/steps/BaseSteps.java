@@ -1,7 +1,7 @@
 package steps;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,17 +22,19 @@ public class BaseSteps {
         return driver;
     }
 
-
-    @BeforeClass
+    @Before
+    //@BeforeClass
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", properties.getProperty("webdriver.chrome.driver"));
         driver = new ChromeDriver();
         baseUrl = properties.getProperty("app.url");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        driver.get(baseUrl);
     }
 
-    @AfterClass
+    @After
+    //@AfterClass
     public static void tearDown() {
         driver.quit();
     }
